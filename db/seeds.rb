@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "destroying everything..."
+User.destroy_all
+Vocab.destroy_all # just in case...
+Tags.destroy_all  # just in case...
+
 puts "creating Users..."
 claire = User.create!(email:"claire@example.com", password:"aaaaaa")
 
