@@ -1,7 +1,6 @@
 <h1>Your Vocab</h1>
 
-<ul>
-  <% @vocabs.each do |vocab| %>
-    <%= render partial: '/shared/components/vocab_card', locals: {vocab: vocab} %>
-  <% end %>
-</ul>
+
+<% @vocabs.each do |vocab| %>
+  <%= render partial: '/shared/components/vocab_card', locals: {vocab: vocab} %>
+<% end %>
