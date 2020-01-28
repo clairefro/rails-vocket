@@ -1,2 +1,7 @@
 <h1>Your Vocab</h1>
-<p>Find me in app/views/vocabs/index.html.erb</p>
+
+<ul>
+  <% @vocabs.each do |vocab| %>
+    <%= render partial: '/shared/components/vocab_card', locals: {vocab: vocab} %>
+  <% end %>
+</ul>
