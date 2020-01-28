@@ -4,3 +4,6 @@
 <% @vocabs.each do |vocab| %>
   <%= render partial: '/shared/components/vocab_card', locals: {vocab: vocab} %>
 <% end %>
+
+
+<%= link_to 'Add vocab', new_vocab_path %>

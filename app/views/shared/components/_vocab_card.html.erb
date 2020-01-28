@@ -1,5 +1,12 @@
-<div class="vocab-card">
-  <h3><%= vocab.french %></h3>
-  <p>(<%= vocab.native_translation %>)</p>
-  <span>✖</span>
+<div class="vocab-card" data-french-entry="<%= vocab.french %>">
+  <div>
+    <h4><%= vocab.french %></h4>
+    <p>(<%= vocab.native_translation %>)</p>
+  </div>
+  <div>
+    <i class="las la-volume-up icon tts-button"></i>
+    <%= link_to vocab_path(vocab), method: :delete  do %>
+      <span class="icon">✖</span>
+    <% end %>
+  </div>
 </div>

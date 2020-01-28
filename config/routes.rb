@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root 'vocabs#index'
 
-  resources :vocabs do
-    resources :tags
+  authenticate :user do
+    resources :vocabs do
+      resources :tags
+    end
   end
 
   devise_for :users

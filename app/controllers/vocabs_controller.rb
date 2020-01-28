@@ -1,4 +1,6 @@
 class VocabsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @vocabs = Vocab.order('created_at DESC')
   end
@@ -15,6 +17,12 @@ class VocabsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+  end
+
+  private
+
+  def vocab_params
+    params.require(:vocab).permit(:french, :native_translation, :starred)
   end
 end
